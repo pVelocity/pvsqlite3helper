@@ -24,7 +24,7 @@ module.exports = {
   },
 
   getDatabase: function() {
-    if (PV.isDatabase(db) === false || db.open === false) {
+    if (PV.isObject(db) === false || db.open === false) {
       db = new sqlite3.Database(':memory:');
       db.closeAsync = util.promisify(db.close);
       db.runAsync = util.promisify(db.run);
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   closeDatabase: async function() {
-    if (PV.isDatabase(db) && db.open === true) {
+    if (PV.isObject(db) && db.open === true) {
       return db.closeAsync().then(function() {
         db = null;
         return;
