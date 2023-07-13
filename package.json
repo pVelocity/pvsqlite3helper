@@ -1,6 +1,6 @@
 {
   "name": "pvsqlite3helper",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "This is an npm module design to perform common sqlite3 uses with pVelocity's pvserver",
   "main": "pvsqlite3helper.js",
   "repository": {
